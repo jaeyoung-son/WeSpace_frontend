@@ -1,0 +1,58 @@
+.login_btn {
+  text-align: center;
+
+  a {
+    border: 1px solid #ccc;
+    display: block;
+    height: 56px;
+    font-size: 16px;
+    line-height: 56px;
+  }
+
+  a:before {
+    content: "";
+    display: inline-block;
+    top: 12px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+    background: url(https://www.spacecloud.kr/_nuxt/img/cfb2f7c.png) no-repeat 0
+      0;
+    background-size: auto 100%;
+    vertical-align: middle;
+    margin-right: 18px;
+  }
+
+  a.kakao:before {
+    background-position: 100% 0;
+  }
+
+  a.kakao {
+    margin-top: 16px;
+  }
+}
+
+.or {
+  text-align: center;
+  margin: 32px 0;
+  position: relative;
+
+  span {
+    position: relative;
+    background: #fff;
+    font-size: 14px;
+    padding: 0 10px;
+    z-index: 1;
+  }
+}
+
+.or:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ebebeb;
+}
