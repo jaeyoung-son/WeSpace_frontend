@@ -1,5 +1,4 @@
 import React from "react";
-
 import MainGnb from "../../Components/MainGnb";
 
 const Main = () => {
