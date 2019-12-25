@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import MainSlideImages from "../../Components/MainSlideImages";
 
 const Main = () => {
-  return (
-    <div>
-      메인페이지
-    </div>
-  )
-}
+  return <MainSlideImages />;
+};
 
-export default Main
+export default Main;
