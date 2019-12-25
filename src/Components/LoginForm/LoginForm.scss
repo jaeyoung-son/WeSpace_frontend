@@ -1,4 +1,5 @@
-li {
+.li,
+.err {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -68,7 +69,7 @@ button.submit {
   border: none;
 }
 
-input {
+input.login_input {
   height: 48px;
   margin-left: 0 auto;
   padding: 0 16px;

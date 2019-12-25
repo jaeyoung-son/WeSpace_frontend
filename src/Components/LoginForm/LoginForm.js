@@ -12,18 +12,22 @@ class LoginForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { idInput, pwInput } = this.state;
-    console.log(idInput, pwInput);
-    fetch("url", {
-      method: "POST",
-      body: JSON.stringify({
-        email: idInput,
-        password: pwInput
+    if (
+      this.checkId(this.state.idInput) === true &&
+      this.checkPw(this.state.pwInput) === true
+    ) {
+      fetch("url", {
+        method: "POST",
+        body: JSON.stringify({
+          email: idInput,
+          password: pwInput
+        })
       })
-    })
-      .then(res => res.json())
-      .then(res => {
-        sessionStorage.setItem("login_token", res.access_token);
-      });
+        .then(res => res.json())
+        .then(res => {
+          sessionStorage.setItem("login_token", res.access_token);
+        });
+    }
   };
 
   handleBoxState = () => {
@@ -71,13 +75,14 @@ class LoginForm extends Component {
             className={
               this.state.idInput.length > 0
                 ? this.checkId(this.state.idInput)
-                  ? ""
+                  ? "li"
                   : "err"
-                : ""
+                : "li"
             }
           >
             <input
               onChange={handleIdChange}
+              className="login_input"
               value={idInput}
               type="text"
               placeholder="이메일"
@@ -88,13 +93,14 @@ class LoginForm extends Component {
             className={
               this.state.pwInput.length > 0
                 ? this.checkPw(this.state.pwInput)
-                  ? ""
+                  ? "li"
                   : "err"
-                : ""
+                : "li"
             }
           >
             <input
               onChange={handlePwChange}
+              className="login_input"
               value={pwInput}
               type="password"
               placeholder="비밀번호"
