@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.scss";
-import SocialLogin from "../../Components/SocialLogin/SocialLogin";
-import LoginForm from "../../Components/LoginForm/LoginForm";
+import SocialLogin from "../../Components/SocialLogin";
+import LoginForm from "../../Components/InputForm";
 
 const Login = () => {
   return (

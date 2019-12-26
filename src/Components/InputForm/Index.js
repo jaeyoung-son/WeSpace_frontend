@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./LoginForm.scss";
+import { checkMail, checkPw } from "../../Utils/CheckValidation";
+import "./InputForm.scss";
 
 class LoginForm extends Component {
   state = {
@@ -12,10 +13,7 @@ class LoginForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { idInput, pwInput } = this.state;
-    if (
-      this.checkId(this.state.idInput) === true &&
-      this.checkPw(this.state.pwInput) === true
-    ) {
+    if (checkMail(idInput) && checkPw(pwInput)) {
       fetch("url", {
         method: "POST",
         body: JSON.stringify({
@@ -50,16 +48,6 @@ class LoginForm extends Component {
     });
   };
 
-  checkId = mail => {
-    const mailtest = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-    return mailtest.test(mail);
-  };
-
-  checkPw = pw => {
-    const pwtest = /^[A-Za-z0-9]{6,40}$/;
-    return pwtest.test(pw);
-  };
-
   render() {
     const { idInput, pwInput, boxMemory } = this.state;
     const {
@@ -73,11 +61,11 @@ class LoginForm extends Component {
         <ul>
           <li
             className={
-              this.state.idInput.length > 0
-                ? this.checkId(this.state.idInput)
-                  ? "li"
+              idInput.length > 0
+                ? checkMail(idInput)
+                  ? "list"
                   : "err"
-                : "li"
+                : "list"
             }
           >
             <input
@@ -91,11 +79,7 @@ class LoginForm extends Component {
           </li>
           <li
             className={
-              this.state.pwInput.length > 0
-                ? this.checkPw(this.state.pwInput)
-                  ? "li"
-                  : "err"
-                : "li"
+              pwInput.length > 0 ? (checkPw(pwInput) ? "list" : "err") : "list"
             }
           >
             <input

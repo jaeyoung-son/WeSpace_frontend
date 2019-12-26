@@ -1,11 +1,8 @@
-.li,
+.list,
 .err {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-ul li:last-child {
   margin-top: 16px;
 }
 
@@ -22,18 +19,17 @@ ul li:last-child {
   .check_box {
     position: relative;
     padding-left: 20px;
+    button {
+      content: "";
+      display: block;
+      position: absolute;
+      margin: 0;
+      top: -2px;
+      left: 0;
+      width: 17px;
+      height: 17px;
+    }
   }
-}
-
-.check_box button {
-  content: "";
-  display: block;
-  position: absolute;
-  margin: 0;
-  top: -2px;
-  left: 0;
-  width: 17px;
-  height: 17px;
 }
 
 .check_box button.checked {
@@ -67,6 +63,7 @@ button.submit {
   line-height: 48px;
   cursor: pointer;
   border: none;
+  outline: none;
 }
 
 input.login_input {
@@ -78,7 +75,7 @@ input.login_input {
   border: 1px solid #e0e0e0;
 }
 
-input:focus {
+.login_input:focus {
   border: 1px solid #ffd014;
 }
 
