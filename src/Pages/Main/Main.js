@@ -1,8 +1,14 @@
 import React from "react";
-import MainSlideImages from "../../Components/MainGnb";
+import MainSlideImages from "../../Components/MainSlideImages";
+import MainGnb from "../../Components/MainGnb";
 
 const Main = () => {
-  return <MainSlideImages />;
+  return (
+    <>
+      <MainGnb />
+      <MainSlideImages />
+    </>
+  );
 };
 
 export default Main;
