@@ -14,7 +14,7 @@ class LoginForm extends Component {
     e.preventDefault();
     const { idInput, pwInput } = this.state;
     if (checkMail(idInput) && checkPw(pwInput)) {
-      fetch("url", {
+      fetch("urll", {
         method: "POST",
         body: JSON.stringify({
           email: idInput,

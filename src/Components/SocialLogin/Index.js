@@ -3,7 +3,7 @@ import "./SocialLogin.scss";
 
 const SocialLogin = ({ name }) => {
   return (
-    <>
+    <div>
       <div className="login_btn">
         <a href="/login" className="naver">
           네이버로 {name}
@@ -15,7 +15,7 @@ const SocialLogin = ({ name }) => {
       <p className="or">
         <span>또는</span>
       </p>
-    </>
+    </div>
   );
 };
 
