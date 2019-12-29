@@ -10,11 +10,15 @@ class LoginForm extends Component {
     boxClass: ""
   };
 
+  goToMain = () => {
+    this.props.history.push("/");
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     const { idInput, pwInput } = this.state;
     if (checkMail(idInput) && checkPw(pwInput)) {
-      fetch("urll", {
+      fetch("http://10.58.7.97:8000/account/auth", {
         method: "POST",
         body: JSON.stringify({
           email: idInput,
@@ -25,6 +29,7 @@ class LoginForm extends Component {
         .then(res => {
           sessionStorage.setItem("login_token", res.access_token);
         });
+      this.goToMain();
     }
   };
 
