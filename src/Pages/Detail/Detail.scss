@@ -1,0 +1,38 @@
+.inner_width {
+  width: 1150px;
+  //미디어 쿼리 처리부분 위
+  padding-bottom: 100px;
+  margin: 140px auto 0 auto;
+  .space_name {
+    font-size: 45px;
+    font-weight: 600;
+  }
+  .sub_desc {
+    margin-top: 17px;
+    padding-bottom: 22px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #656565;
+    font-family: Georgia, NanumBarunGothicUltralight, sans-serif;
+  }
+  .header_tags {
+    .tag {
+      margin: 6px 6px 6px 0;
+      padding: 0 15px;
+      height: 29px;
+      font-size: 14px;
+      line-height: 29px;
+      border-radius: 29px;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      color: #656565;
+      display: inline-block;
+    }
+  }
+  .detail_form {
+    padding-right: 395px;
+    position: relative;
+    //미디어쿼리 처리부분 위
+    padding-top: 30px;
+  }
+}

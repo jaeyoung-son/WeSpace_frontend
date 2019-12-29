@@ -1,0 +1,434 @@
+.right_fixed {
+  position: absolute;
+  right: 0;
+  top: 46px;
+  width: 368px;
+  padding: 0 15px;
+}
+.right_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #704de4;
+  span {
+    font-weight: bold;
+  }
+  .social_img {
+    position: relative;
+  }
+  div.social_share {
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    background-size: 684px 663px;
+    background-image: url(https://www.spacecloud.kr/_nuxt/img/08341ee.png);
+    background-position: 0 -507px;
+    width: 37px;
+    height: 37px;
+    transform: scale(0.5);
+  }
+  div.like_btn {
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    background-size: 684px 663px;
+    background-image: url(https://www.spacecloud.kr/_nuxt/img/08341ee.png);
+    background-position: -519px -365px;
+    width: 42px;
+    height: 38px;
+    transform: scale(0.5);
+  }
+}
+.respond_info {
+  padding: 19px 20px 17px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff;
+  p {
+    line-height: 25px;
+  }
+}
+.reserve_list {
+  background-color: #fff;
+
+  .check_money {
+    padding: 22px 20px 21px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .check_left {
+      display: flex;
+      align-items: center;
+    }
+    .radio_btn {
+      display: inline-block;
+      background-size: 684px 663px;
+      background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
+      background-position: -565px -278px;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+    }
+    span.check_space {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      margin-left: 15px;
+    }
+    .reserve_left {
+      font-size: 20px;
+      color: #6d3bff;
+      font-weight: 600;
+    }
+    .reserve_right {
+      color: #949494;
+      padding-left: 5px;
+      font-size: 12px;
+    }
+  }
+  .space_info {
+    border: 1px solid #704de4;
+    padding: 15px 20px 30px 20px;
+    background-color: #fff;
+    .info_top {
+      width: 100%;
+      p {
+        font-size: 15px;
+        padding: 20px 0;
+      }
+      .info_img {
+        background-image: url(https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630896_921218cf8e9718dab646021f29dc26fa.jpeg?type=m&w=900&h=900&autorotate=true&quality=90);
+        height: 180px;
+        background-size: cover;
+        width: 100%;
+      }
+    }
+
+    .list_detail {
+      border-bottom: 1px solid #ebebeb;
+      list-style: none;
+
+      li {
+        position: relative;
+        font-size: 15px;
+        border-top: 1px solid #ebebeb;
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        div {
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          background-color: #656565;
+        }
+        .space_type {
+          left: 5px;
+          position: absolute;
+          color: #656565;
+          margin: 0 7px 0 5px;
+        }
+
+        .space_list {
+          margin-left: 70px;
+        }
+      }
+    }
+
+    .facility li {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 12px;
+      line-height: 17px;
+      position: relative;
+      width: 33%;
+
+      .facility_img {
+        position: absolute;
+        background-size: 684px 663px;
+        background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
+        background-position: -599px -456px;
+        width: 34px;
+        height: 34px;
+      }
+
+      p {
+        padding-right: 10px;
+        color: #949494;
+        text-align: right;
+      }
+    }
+
+    .fixed_bot {
+      border-top: 3px solid #704de4;
+      font-size: 17px;
+      margin-top: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #ccc;
+      font-weight: 600;
+    }
+
+    .reserve_select {
+      position: relative;
+      padding-top: 14px;
+      display: flex;
+      align-content: center;
+
+      div.radio_btn {
+        display: inline-block;
+        background-size: 684px 663px;
+        background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
+        background-position: -565px -330px;
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+      }
+      span {
+        margin: 5px 0 0 10px;
+      }
+      .radio_btn_checked {
+        top: 19.5px;
+        left: 5.5px;
+        position: absolute;
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: #704de4;
+        cursor: pointer;
+      }
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .day_header {
+      padding-top: 32px;
+      font-size: 18px;
+      font-weight: 600;
+      border-bottom: 3px solid #704de4;
+      padding-bottom: 15px;
+    }
+    .react-calendar__navigation__label {
+      font-size: 15px;
+    }
+
+    .calendar {
+      margin-top: 10px;
+      border: none;
+
+      abbr {
+        font-size: 15px;
+      }
+    }
+    .time_container {
+      margin-top: 30px;
+      padding-bottom: 20px;
+      position: relative;
+      list-style: none;
+      border-bottom: 1px solid #ebebeb;
+
+      .time_slicebox {
+        display: flex;
+      }
+
+      .time_list {
+        overflow-x: scroll;
+        transition-timing-function: ease-out;
+
+        .first_time_slice {
+          margin-left: 10px;
+          width: 15px;
+          text-align: center;
+          background: none;
+          color: #b2b2b2;
+        }
+        .first_time_price {
+          margin-left: 20px;
+          padding: 2px;
+          display: inline-block;
+          width: 45px;
+          min-width: 45px;
+          height: 41px;
+          font-size: 10px;
+          background-image: url(http://www.spacecloud.kr/_nuxt/img/a1927c9.png);
+          background-size: 463px 458px;
+          background-position: -208px -90px;
+          border: 1px solid #ccc;
+        }
+        .time_price {
+          padding-top: 14px;
+          color: #cc8c28;
+          border: 2px solid #ffc000;
+          background-color: #ffd014;
+          width: 45px;
+          min-width: 45px;
+          height: 41px;
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+    }
+
+    .day_footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      height: 50px;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+
+      span {
+        font-size: 18px;
+        padding-top: 20px;
+        width: 65%;
+      }
+
+      .plus_btn {
+        width: 17.5%;
+        padding-top: 20px;
+        background-color: #f6f6f6;
+        height: 100%;
+        cursor: pointer;
+        border-right: 1px solid #ebebeb;
+      }
+      .minus_btn {
+        width: 17.5%;
+        padding-top: 20px;
+        height: 100%;
+        background-color: #f6f6f6;
+        cursor: pointer;
+        border-left: 1px solid #ebebeb;
+      }
+    }
+  }
+  .bot_btn {
+    display: flex;
+    width: 100%;
+    .call_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #704de4;
+      height: 60px;
+      width: 40%;
+      span {
+        color: #d9cdff;
+        font-size: 18px;
+        position: relative;
+
+        div {
+          margin-right: 10px;
+          position: relative;
+          background: none;
+          display: inline-block;
+          background-position: -565px -252px;
+          width: 22px;
+          height: 22px;
+          background-size: 684px 663px;
+          background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
+        }
+      }
+    }
+    .reserve_btn {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #704de4;
+      height: 60px;
+      width: 60%;
+      color: #ffd014;
+      font-size: 18px;
+
+      span {
+        padding-top: 7px;
+      }
+    }
+    div {
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: 0;
+      content: "";
+      width: 1px;
+      background-color: #5940ac;
+    }
+  }
+}
+.right_banner {
+  margin-top: 20px;
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.right_pop {
+  background-color: white;
+  border-radius: 12px;
+  padding: 54px 26px 26px;
+  width: 470px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  p {
+    padding: 0 30px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .call_info {
+    margin: 38px auto 60px;
+    width: 340px;
+    padding: 13px 0;
+    font-size: 26px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .call_btn a {
+    display: block;
+    border-radius: 6px;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    background-color: #704de4;
+    color: white;
+  }
+}
+
+.right_pop:target {
+  z-index: 5;
+  display: inline-block;
+  transition: all 0.5s;
+}
+.right_pop:target + .detail_dim {
+  display: block;
+  position: fixed;
+  transition: all 0.5s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  text-indent: -9999px;
+}
+
+.scroll {
+  width: calc(300px - 10px);
+  display: flex;
+}
+
+.detail_dim {
+  display: block;
+  text-indent: -999px;
+}
