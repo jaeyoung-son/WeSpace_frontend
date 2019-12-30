@@ -1,0 +1,216 @@
+$width-small: 720px;
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  //바탕 투명
+  background-color: rgba(0, 0, 0, 0.16);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  width: 362px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 99;
+  @media all and(max-width:$width-small) {
+    width: 280px;
+  }
+  .back_color_outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .back_color_inner {
+      width: 362px;
+      height: 170px;
+      background-color: #ffd014;
+      opacity: 0.7;
+      z-index: 1;
+      @media all and(max-width:$width-small) {
+        width: 280px;
+        height: 100px;
+      }
+    }
+  }
+  //프로필
+  .modal_profile {
+    height: 170px;
+    opacity: 1;
+    position: relative;
+    @media all and(max-width:$width-small) {
+      height: 100px;
+    }
+    .profile_background {
+      display: flex;
+      align-items: center;
+      background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAxNzA1MDVfMTUg%2FMDAxNDkzOTkyNTE3MzMx.TLndmPAeo2QEbL80n4_2QWZ1YxSIHlbl8DcrGm3qzmcg.Bth95vXz1mbs68KafvpLUQKzCqTKQEyD70ZhcyWgo1Ig.JPEG.dnalstjq126%2F%25BD%25C7%25BB%25E7%25BF%25CE%25B1%25BB.jpg&type=b400");
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 100%;
+      width: 100%;
+      a {
+        z-index: 10;
+      }
+      img {
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        @media all and(max-width:$width-small) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      .modal_profile_text {
+        padding: 10px;
+        .modal_profile_name {
+          font-size: 24px;
+          font-weight: 500;
+          @media all and(max-width:$width-small) {
+            font-size: 18px;
+          }
+        }
+        .profile_edit {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    //뒤로가기 화살표
+    .button_wrap {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      .button_image {
+        background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+        background-position: -637px -510px;
+        width: 24px;
+        height: 26px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .modal_scroll {
+    overflow: auto;
+    overflow-x: hidden;
+    height: 80%;
+  }
+  //상위 메뉴
+  .modal_menu_top {
+    height: 108px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 14px;
+    span {
+      margin-top: 10px;
+    }
+  }
+
+  //이달의 기획
+  .modal_monthplanning {
+    font-size: 18px;
+    padding: 0 210px 0 25px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    background-color: #704de4;
+    @media all and(max-width:$width-small) {
+      font-size: 14px;
+      padding: 0 100px 0 25px;
+    }
+  }
+
+  //하위 메뉴
+  .modal_menu_bottom {
+    padding-top: 15px;
+  }
+  .modal_menu_bottom:first-child {
+    color: #704de4;
+  }
+
+  //로그아웃
+  .modal_logout {
+    padding: 39px 0 38px;
+    text-align: center;
+    color: #949494;
+    a {
+      color: #949494;
+    }
+    p {
+      padding: 20px 0;
+    }
+  }
+  //호스트센터 이동
+  .modal_host {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 0 30px;
+    background: #6d3afb;
+    color: #ffd014;
+    font-size: 18px;
+    text-align: center;
+    a {
+      color: #ffd014;
+    }
+    @media all and(max-width:$width-small) {
+      font-size: 14px;
+    }
+
+    .host_icon {
+      display: inline-block;
+      background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+      background-position: -336px -586px;
+      width: 32px;
+      height: 32px;
+      margin-left: 10px;
+      transform: translateY(30%);
+    }
+  }
+}
+
+//애니메이션
+
+//배경화면
+.modal_overlay {
+  &.modal_anim-enter {
+    opacity: 0;
+  }
+  &.modal_anim-enter.modal_anim-enter-active {
+    opacity: 1;
+  }
+  &.modal_anim-leave {
+    opacity: 1;
+    transition: all 1.5s;
+  }
+  &.modal_anim-leave.modal_anim-leave-active {
+    opacity: 0;
+  }
+}
+
+//모달
+.modal {
+  &.modal_anim-enter {
+    opacity: 0;
+    transition: all 1.5s;
+  }
+  &.modal_anim-enter.modal_anim-enter-active {
+    opacity: 1;
+  }
+  &.modal_anim-leave {
+    opacity: 1;
+    transition: all 1.5s;
+  }
+  &.modal_anim-leave.modal_anim-leave-active {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+}

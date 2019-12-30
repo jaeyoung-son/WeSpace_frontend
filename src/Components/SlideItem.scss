@@ -98,6 +98,7 @@ $width-small: 720px;
   background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png") !important;
   background-position: -637px -299px !important;
   border-radius: 0 !important;
+  z-index: 1;
 }
 
 .react-slideshow-container .nav:first-of-type {
