@@ -38,7 +38,17 @@
     }
   ],
   "spaceData": {
+    "address": "부산 부산진구 동성로 27 세호기업 4층 오프데이 스튜디오",
+    "imgLink": [
+      "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630830_717e106d5ccd9d959b6a34fa779d8bae.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
+      "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630819_0ce90950671796d581d0aa0842406273.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
+      "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630825_e0d0e1342060b0966059e8b96bc52c49.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
+      "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630831_85677e7a3ff84f7cef6d231290104d5b.jpeg?type=m&w=900&h=900&autorotate=true&quality=90"
+    ],
+    "setTime": "1~24시",
+    "holiday": "매주 월요일",
     "spaceType": "스튜디오",
+    "subTitle": "전포동에 위치한 유니크한 감성의 스튜디오입니다.",
     "spacePrice": "30,000",
     "spaceContext": "스튜디오 공간 전체를 사용하는 개념",
     "type": "세미나실 다목적홀 작업실 파티룸 공연장",
@@ -47,7 +57,26 @@
     "reserve": "시간 단위 예약하기",
     "name": "OFFDAY STUDIO",
     "call": "0504-1380-1183",
-    "minPeople": "5"
+    "minPeople": "5",
+    "topTag": [
+      "#부산스튜디오",
+      "#전포동스튜디오",
+      "#서면스튜디오",
+      "#서면공간대여"
+    ],
+    "introMessage": "다양한 느낌이 조화롭게 섞인 자유로운 공간입니다. 50여평의 넓은 공간안에 철제 가구와 무엇이든 표현 가능한 화이트 컬러로 채워넣었습니다. 사진 스튜디오 부터 전시회장, 소공연장, 파티룸 등으로 활용할 수 있습니다.",
+    "spaceInfo": [
+      "사진 촬영이 가능한 컨셉이 다른 두개의 공간을 가지고 있습니다.",
+      "회의나 파티 목적의 테이블이 4개와 간이 테이블 몇개, 철제의자 및 간이의자 40여개를 갖추고 있습니다.",
+      "기본적으로는 사진 스튜디오의 기능을 하는 공간입니다. 현재 포맥스 조명세트와 몇개의 지속광을 갖추고 있습니다.",
+      "성능 좋은 빔프로젝터, 냉장고, 전자렌지를 갖추고 있습니다.",
+      "화장실이 하나 있습니다."
+    ],
+    "reserveWarning": [
+      "전포역에서 내리시면 걸어서 5분 거리에 있습니다.",
+      "엘리베이터가 없습니다.",
+      "음식물과 음료를 드셔도 되지만 퇴실하실 때는 모두 치워주셔야 합니다."
+    ]
   },
   "TimeBox": [
     "1",

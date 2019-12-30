@@ -13,7 +13,6 @@
     font-size: 22px;
     line-height: 22px;
     color: #656565;
-    font-family: Georgia, NanumBarunGothicUltralight, sans-serif;
   }
   .header_tags {
     .tag {
@@ -34,5 +33,151 @@
     position: relative;
     //미디어쿼리 처리부분 위
     padding-top: 30px;
+
+    .detail_main {
+      padding: 50px 100px 0 0;
+      font-size: 48px;
+      line-height: 60px;
+      font-weight: 340;
+    }
+    p.h_intro {
+      margin-top: 40px;
+    }
+    .h_intro {
+      padding-bottom: 20px;
+      margin: 70px 0 20px;
+      color: #000;
+      font-size: 18px;
+      line-height: 30px;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .h_intro:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      height: 4px;
+      width: 20px;
+      background-color: #ffd014;
+    }
+    .intro_message {
+      font-size: 16px;
+      line-height: 28px;
+      color: #656565;
+    }
+
+    .info_time {
+      font-size: 18px;
+      margin-top: 45px;
+      padding: 14px 0;
+      border-bottom: 1px solid #ebebeb;
+
+      span {
+        margin-left: 25px;
+        color: #656565;
+        font-size: 17px;
+      }
+    }
+    .info_day {
+      margin-top: 15px;
+      font-size: 17px;
+
+      span {
+        margin-left: 43px;
+        color: #656565;
+        font-size: 17px;
+      }
+    }
+    .info_list:last-child {
+      border: none;
+    }
+    .info_list {
+      border-bottom: 1px solid #ebebeb;
+      padding: 10px 0;
+      span {
+        margin-left: 22px;
+        padding: 10px 0 8px 0;
+        color: #656565;
+        line-height: 28px;
+      }
+    }
+
+    .refund_text {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    .refund_red {
+      padding-top: 10px;
+      margin-bottom: 8px;
+      color: rgb(255, 58, 72);
+    }
+
+    p.refund_day {
+      color: rgb(101, 101, 101);
+    }
+
+    span.refund_per {
+      color: black;
+    }
+    span.margin_plus {
+      margin-left: 30px;
+    }
+    .host_profile {
+      margin-top: 78px;
+      background-color: white;
+      .profile_inner {
+        padding: 33px 30px 38px;
+        .pr_name {
+          font-size: 24px;
+          line-height: 26px;
+        }
+        .pr_adr {
+          margin-top: 20px;
+          color: #656565;
+        }
+        .bot_btn {
+          margin-top: 30px;
+          a {
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            width: 45%;
+            margin: 0 8px;
+            height: 50px;
+            color: #704de4;
+            line-height: 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            border: 1px solid #704de4;
+
+            .call_img {
+              display: inline-block;
+              position: absolute;
+              top: 12px;
+              left: 80px;
+              background-size: 684px 663px;
+              background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
+              background-position: -565px -170px;
+              width: 22px;
+              height: 24px;
+            }
+
+            .road_img {
+              position: absolute;
+              background-size: 684px 663px;
+              background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
+              background-position: -565px -489px;
+              width: 18px;
+              height: 24px;
+              display: inline-block;
+              top: 12px;
+              left: 100px;
+            }
+          }
+        }
+      }
+    }
   }
 }
