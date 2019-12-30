@@ -189,7 +189,7 @@ $width-small: 720px;
   }
   &.modal_anim-leave {
     opacity: 1;
-    transition: all 3s;
+    transition: all 1.5s;
   }
   &.modal_anim-leave.modal_anim-leave-active {
     opacity: 0;
@@ -200,14 +200,14 @@ $width-small: 720px;
 .modal {
   &.modal_anim-enter {
     opacity: 0;
-    transition: all 2s;
+    transition: all 1.5s;
   }
   &.modal_anim-enter.modal_anim-enter-active {
     opacity: 1;
   }
   &.modal_anim-leave {
     opacity: 1;
-    transition: all 3s;
+    transition: all 1.5s;
   }
   &.modal_anim-leave.modal_anim-leave-active {
     opacity: 0;

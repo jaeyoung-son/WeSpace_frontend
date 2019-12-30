@@ -12,13 +12,13 @@ class MainGnb extends Component {
     };
   }
 
-  openModal = () => {
-    this.setState({ isModalOpen: true });
+  openedClosedModal = () => {
+    this.setState({ isModalOpen: !this.state.isModalOpen });
   };
 
-  closeModal = () => {
-    this.setState({ isModalOpen: false });
-  };
+  // closeModal = () => {
+  //   this.setState({ isModalOpen: false });
+  // };
 
   render() {
     return (
@@ -39,11 +39,11 @@ class MainGnb extends Component {
           <Link to="/" className="nav_link">
             공간 등록하기
           </Link>
-          <div to="/" className="menu_link" onClick={this.openModal}>
+          <div className="menu_link" onClick={this.openedClosedModal}>
             <div className="header_menu_img"></div>
           </div>
         </div>
-        <Modal isOpen={this.state.isModalOpen} close={this.closeModal} />
+        <Modal isOpen={this.state.isModalOpen} close={this.openedClosedModal} />
       </header>
     );
   }
