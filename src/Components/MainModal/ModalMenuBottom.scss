@@ -1,0 +1,23 @@
+$width-small: 720px;
+.bottom_menu_item {
+  position: relative;
+  display: block;
+  padding: 21px 25px 20px;
+  border-top: 1px solid #ebebeb;
+  background: #fff;
+  font-size: 18px;
+  @media all and(max-width:$width-small) {
+    font-size: 14px;
+  }
+  .bottom_menu_icon {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+    background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+    background-position: -672px -275px;
+    width: 10px;
+    height: 16px;
+  }
+}
