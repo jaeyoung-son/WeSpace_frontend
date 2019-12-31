@@ -60,7 +60,9 @@ class Detail extends Component {
             <p className="sub_desc">{subTitle}</p>
             <div className="header_tags">{tagList}</div>
           </div>
+
           <div className="detail_form">
+            <RightNavigation />
             <ImgSlide />
             <div className="detail_inf">
               <p className="detail_main">{subTitle}</p>
@@ -143,7 +145,6 @@ class Detail extends Component {
             <div className="space_other">
               호스트의 다른 공간이 아직 없습니다.
             </div>
-            <RightNavigation />
           </div>
         </div>
       </div>

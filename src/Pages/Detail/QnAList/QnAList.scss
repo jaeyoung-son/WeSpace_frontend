@@ -1,3 +1,7 @@
+$width-small: 720px;
+$width-medium: 1000px;
+$width-large: 1300px;
+
 .inner_width .detail_form div.h_intro {
   span.comment_count {
     margin-left: 10px;
@@ -13,6 +17,9 @@
     right: 0;
     padding: 5px 17px 3px;
     font-size: 14px;
+    @media all and(max-width:$width-small) {
+      font-size: 10px;
+    }
 
     span {
       display: inline-block;
@@ -165,6 +172,10 @@
     background-size: 684px 663px;
     background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
     cursor: pointer;
+    @media all and(max-width:$width-small) {
+      width: 42px;
+      height: 42px;
+    }
   }
 
   .move_first {

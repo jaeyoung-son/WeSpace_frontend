@@ -1,3 +1,7 @@
+$width-small: 720px;
+$width-medium: 1000px;
+$width-large: 1300px;
+
 .right_fixed {
   position: absolute;
   right: 0;
@@ -431,4 +435,104 @@
 .detail_dim {
   display: block;
   text-indent: -999px;
+}
+
+@media all and(max-width:$width-large) {
+  .right_fixed {
+    position: relative;
+    width: 100%;
+    .space_info {
+      .facility {
+        li {
+          p {
+            text-align: left;
+            padding-left: 50px;
+          }
+        }
+      }
+      .scroll {
+        width: 100%;
+      }
+      .day_footer {
+        div.plus_btn,
+        div.minus_btn {
+          width: 48px;
+        }
+      }
+      .bot_btn {
+        width: 10px;
+      }
+    }
+    div.bot_btn {
+      z-index: 10;
+      left: 0;
+      bottom: 0;
+      min-width: 768px;
+      position: fixed;
+      width: 100%;
+    }
+    .react-calendar {
+      width: 100%;
+    }
+  }
+  .slide_container img {
+    height: 340px;
+  }
+}
+
+@media all and(max-width:$width-small) {
+  .whole_container {
+    padding: 0 20px;
+  }
+  .inner_width {
+    .detail_form {
+      width: 100%;
+
+      .host_profile {
+        .profile_inner {
+          .bot_btn a {
+            i.road_img {
+              left: 80px;
+            }
+            i.call_img {
+              left: 70px;
+            }
+          }
+        }
+      }
+      .slide_container img {
+        width: 100%;
+      }
+      p.detail_main {
+        padding: 31px 0 0;
+        font-size: 24px;
+        line-height: 32px;
+      }
+      p.h_intro {
+        font-size: 15px;
+      }
+      .info_list {
+        font-size: 14px;
+      }
+      p.intro_message {
+        font-size: 14px;
+      }
+      p.info_time,
+      p.info_day {
+        font-size: 14px;
+        span {
+          font-size: 14px;
+        }
+      }
+      div.refund_text {
+        font-size: 13px;
+      }
+      .refund_red {
+        font-size: 13px;
+      }
+      div.h_intro {
+        font-size: 16px;
+      }
+    }
+  }
 }
