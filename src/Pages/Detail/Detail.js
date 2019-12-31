@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RightNavigation from "./RightNavigation";
 import fetchData from "../../Utils/fetch";
 import HeadingTag from "./HeadingTag";
+import QnAList from "./QnAList";
 import ImgSlide from "../Detail/ImgSlide/ImgSlide";
 import InfoList from "./InfoList";
 import RefundList from "./RefundList";
@@ -124,7 +125,9 @@ class Detail extends Component {
                   </a>
                 </div>
               </div>
+              <div className="space_map">지도</div>
             </div>
+            <QnAList />
             <RightNavigation />
           </div>
         </div>
