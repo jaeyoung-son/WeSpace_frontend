@@ -1,0 +1,26 @@
+.signup_input {
+  height: 46px;
+  padding: 0 16px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  margin-top: 16px;
+}
+
+.signup_input:focus {
+  border: 1px solid #ffd014;
+}
+
+.signup_err_message {
+  display: none;
+}
+li.signup_err {
+  p.signup_err_message {
+    display: block;
+    padding-top: 10px;
+    color: #ff3a48;
+  }
+  input {
+    border-color: #ff3a48 !important;
+  }
+}
