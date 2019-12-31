@@ -12,33 +12,10 @@ class QnAList extends Component {
     postPerpage: 3
   };
 
-  handleMoveBtn = e => {
-    if (
-      e.target.classList[1] === "move_right" &&
-      this.state.currentPage <
-        Math.ceil(this.state.comment.length / this.state.postPerpage)
-    ) {
-      this.setState({
-        currentPage: this.state.currentPage + 1
-      });
-    } else if (e.target.classList[1] === "move_end") {
-      this.setState({
-        currentPage: Math.ceil(
-          this.state.comment.length / this.state.postPerpage
-        )
-      });
-    } else if (e.target.classList[1] === "move_first") {
-      this.setState({
-        currentPage: 1
-      });
-    } else if (
-      e.target.classList[1] === "move_one_left" &&
-      this.state.currentPage > 1
-    ) {
-      this.setState({
-        currentPage: this.state.currentPage - 1
-      });
-    }
+  handleMoveBtn = value => {
+    this.setState({
+      currentPage: value
+    });
   };
 
   handlePage = number => {
@@ -62,12 +39,13 @@ class QnAList extends Component {
         userTime: "2019.12.27 09:46:02"
       }
     ];
-
-    const newArr = userComment.concat(this.state.comment);
-    this.setState({
-      comment: newArr,
-      inputComment: ""
-    });
+    if (this.state.inputComment.length > 1) {
+      const newArr = userComment.concat(this.state.comment);
+      this.setState({
+        comment: newArr,
+        inputComment: ""
+      });
+    }
   };
 
   handleFixed = index => {};
@@ -154,8 +132,14 @@ class QnAList extends Component {
         </div>
         {userQnA}
         <div className="comment_page">
-          <i onClick={handleMoveBtn} className="move_btn move_first"></i>
-          <i onClick={handleMoveBtn} className="move_btn move_one_left"></i>
+          <i
+            onClick={() => handleMoveBtn(1)}
+            className="move_btn move_first"
+          ></i>
+          <i
+            onClick={() => handleMoveBtn(currentPage - 1)}
+            className="move_btn move_one_left"
+          ></i>
           <div>
             <PageMove
               currentPage={currentPage}
@@ -164,8 +148,18 @@ class QnAList extends Component {
               movePage={handlePage}
             />
           </div>
-          <i onClick={handleMoveBtn} className="move_btn move_right"></i>
-          <i onClick={handleMoveBtn} className="move_btn move_end"></i>
+          <i
+            onClick={() => handleMoveBtn(currentPage + 1)}
+            className="move_btn move_right"
+          ></i>
+          <i
+            onClick={() =>
+              handleMoveBtn(
+                Math.ceil(this.state.comment.length / this.state.postPerpage)
+              )
+            }
+            className="move_btn move_end"
+          ></i>
         </div>
       </>
     );
