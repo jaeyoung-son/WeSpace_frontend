@@ -35,7 +35,8 @@ class Detail extends Component {
       subTitle,
       introMessage,
       setTime,
-      holiday
+      holiday,
+      hostImg
     } = this.state.spaceData;
     const { topTag, reserveList, reserveWarning } = this.state;
 
@@ -52,7 +53,7 @@ class Detail extends Component {
     ));
 
     return (
-      <>
+      <div className="whole_container">
         <div className="inner_width">
           <div className="main_heading">
             <p className="space_name">{name}</p>
@@ -125,13 +126,27 @@ class Detail extends Component {
                   </a>
                 </div>
               </div>
-              <div className="space_map">지도</div>
             </div>
+            <div className="space_map">지도</div>
             <QnAList />
+            <div className="profile_inner">
+              <div className="host_top">
+                <div className="host_inner">
+                  <img src={hostImg} alt="."></img>
+                  <p className="host_h">HOST</p>
+                  <p>호스트</p>
+                  <div>호스트 페이지로 이동-></div>
+                </div>
+              </div>
+            </div>
+            <div className="h_intro">호스트의 다른공간</div>
+            <div className="space_other">
+              호스트의 다른 공간이 아직 없습니다.
+            </div>
             <RightNavigation />
           </div>
         </div>
-      </>
+      </div>
     );
   }
 }
