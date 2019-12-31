@@ -4,7 +4,6 @@ import Main from "./Pages/Main/Main";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Detail from "./Pages/Detail/Detail";
-import history from "./Utils/history";
 
 class Routes extends React.Component {
   render() {
