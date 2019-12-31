@@ -102,11 +102,7 @@ class KaKaoMap extends Component {
       <div className="map_wrap" style={mapWidth}>
         <div className="map" id="map" ref={ref => (this.mapRef = ref)}></div>
         <div className="custom_zoomcontrol radius_border">
-          <span
-            className={this.state.clicked ? "custom_zoomcontrol_lock" : "custom_zoomcontrol_unlock"}
-            ref={ref => (this.lockRef = ref)}
-            onClick={this.handleClick}
-          ></span>
+          <span className={this.state.clicked ? "custom_zoomcontrol_lock" : "custom_zoomcontrol_unlock"} onClick={this.handleClick}></span>
           <span className="custom_zoomcontrol_in" onClick={this.zoomIn}></span>
           <span className="custom_zoomcontrol_out" onClick={this.zoomOut}></span>
         </div>
