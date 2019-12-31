@@ -9,9 +9,7 @@ const properties = {
   infinite: true,
   indicators: false,
   arrows: true,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-  }
+  onChange: (oldIndex, newIndex) => {}
 };
 
 class MainSlideImages extends Component {

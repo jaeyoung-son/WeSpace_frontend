@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /*global kakao*/
 import React, { Component } from "react";
 import "./KaKaoMap.scss";
