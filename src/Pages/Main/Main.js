@@ -1,14 +1,17 @@
 import React from "react";
 import MainSlideImages from "../../Components/MainSlideImages";
 import MainGnb from "../../Components/MainGnb";
-import KaKaoMap from "../../Components/KaKaoMap";
+import MainList from "../../Components/MainList";
+import "../../Styles/Main.scss";
 
 const Main = () => {
   return (
     <>
       <MainGnb />
-      <MainSlideImages />
-      <KaKaoMap address={"도영로 80"} />
+      <div className="main_top_contents">
+        <MainSlideImages />
+        <MainList />
+      </div>
     </>
   );
 };

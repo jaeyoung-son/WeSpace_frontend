@@ -1,0 +1,21 @@
+$width-small: 720px;
+
+.main_top_contents {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+.main_sub_title {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  @media all and(max-width:$width-small) {
+    font-size: 20px;
+  }
+}
+.icon {
+  background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+  background-size: 684px 663px;
+}

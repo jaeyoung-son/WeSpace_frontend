@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 class SlideItem extends Component {
   render() {
-    console.log(this.props);
     return (
       <Link to="/" className="slide_wrap">
         <div className="each-slide">
