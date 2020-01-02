@@ -9,9 +9,9 @@ $width-small: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
+  background-size: 100% 100%;
   width: 100%;
-  height: 450px;
+  height: 470px;
   position: relative;
   @media all and(max-width:$width-small) {
     height: 240px;
@@ -24,7 +24,7 @@ $width-small: 720px;
   .slideItem_article {
     position: absolute;
     top: 25%;
-    width: 80%;
+    width: 70%;
     font-weight: 200;
     .slideItem_title {
       font-size: 18px;
@@ -93,6 +93,9 @@ $width-small: 720px;
 }
 
 //화살표 버튼 수정
+.react-slideshow-container {
+  position: relative;
+}
 .react-slideshow-container .nav {
   background: transparent !important;
   background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png") !important;
@@ -104,4 +107,18 @@ $width-small: 720px;
 .react-slideshow-container .nav:first-of-type {
   background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png") !important;
   background-position: -637px -259px !important;
+  position: absolute;
+  top: 44%;
+  left: 0.5%;
+}
+.react-slideshow-container .nav:last-of-type {
+  position: absolute;
+  top: 44%;
+  right: 0;
+}
+
+ul {
+  .slider {
+    transform: translate3d(-50.8%, 0px, 0px);
+  }
 }

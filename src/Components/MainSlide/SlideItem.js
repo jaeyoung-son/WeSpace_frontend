@@ -7,7 +7,10 @@ class SlideItem extends Component {
     return (
       <Link to="/" className="slide_wrap">
         <div className="each-slide">
-          <div style={{ backgroundImage: `url(${this.props.slideImage})` }} className="slideItem_image">
+          <div
+            style={{ backgroundImage: `url(${this.props.slideImage})` }}
+            className="slideItem_image"
+          >
             <div className="slideItem_article">
               <h3 className="slideItem_title">제목</h3>
               <p className="slideItem_text">
