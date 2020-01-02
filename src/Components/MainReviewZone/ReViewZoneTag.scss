@@ -1,0 +1,15 @@
+.review_tag {
+  display: inline-block;
+  font-size: 12px;
+  height: 15px;
+  border: 1px solid #6d3afb;
+  color: #6d3afb;
+  border-radius: 12px;
+  padding: 2px;
+  margin: 2px;
+  height: 18px;
+  .review_tag_text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

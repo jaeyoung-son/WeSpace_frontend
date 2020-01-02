@@ -1,0 +1,21 @@
+.space_review_area {
+  padding-top: 10px;
+  .full_star {
+    display: inline-block;
+    background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+    background-position: -641px -624px;
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    padding: 10px 0;
+  }
+  .empty_star {
+    display: inline-block;
+    background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+    background-position: -353px -646px;
+    width: 13px;
+    height: 13px;
+    padding: 10px 0;
+    vertical-align: middle;
+  }
+}
