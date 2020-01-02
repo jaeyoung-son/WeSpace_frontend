@@ -1,0 +1,133 @@
+$width-small: 720px;
+$width-medium: 1000px;
+$width-large: 1300px;
+
+.inner_slide_article {
+  position: relative;
+  padding: 18px 20px 14px;
+  text-align: start;
+  background-color: white;
+  @media all and(max-width:$width-large) {
+    padding: 5px 10px 5px;
+  }
+  .inner_article_title {
+    font-size: 25px;
+    padding-bottom: 7px;
+    font-weight: 600;
+    @media all and(max-width:$width-large) {
+      font-size: 18px;
+    }
+    @media all and(max-width:$width-medium) {
+      font-size: 12px;
+    }
+  }
+  .inner_article_tag {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+
+    .tag_image {
+      display: inline-block;
+      background-size: 684px 663px;
+      background-image: url("https://www.spacecloud.kr/_nuxt/img/a1927c9.png");
+      background-position: -425px -325px;
+      width: 20px;
+      height: 17px;
+      vertical-align: middle;
+    }
+    .tag_title {
+      display: inline-block;
+      color: #656565;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 1px 10px 1px 5px;
+      border-right: 1px solid #656565;
+      white-space: nowrap;
+    }
+    .tag_hash {
+      flex: 1 2;
+      color: #656565;
+      font-size: 12px;
+      padding-left: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .inner_slide_price {
+    display: flex;
+    padding-top: 3px;
+    margin-top: 11px;
+    align-items: center;
+    font-size: 12px;
+
+    .price {
+      font-size: 22px;
+      color: #6d3afb;
+      font-weight: 600;
+      padding-right: 5px;
+      @media all and(max-width: $width-medium) {
+        font-size: 12px;
+      }
+    }
+    .time_price {
+      @media all and(max-width: $width-medium) {
+        font-size: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .inner_price_naver {
+    text-align: center;
+    background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+    background-position: -482px -201px;
+    width: 32px;
+    height: 13px;
+    margin-left: 10px;
+    @media all and(max-width: $width-small) {
+      display: none;
+    }
+  }
+
+  .inner_reply_wrap {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    @media all and(max-width:$width-large) {
+      display: none;
+    }
+    .inner_reply {
+      display: inline-block;
+      background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+      background-position: -459px -646px;
+      width: 13px;
+      height: 12px;
+    }
+    span {
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+  .inner_like_wrap {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    @media all and(max-width:$width-large) {
+      display: none;
+    }
+    .inner_like {
+      display: inline-block;
+      background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+      background-position: -476px -646px;
+      width: 13px;
+      height: 12px;
+    }
+    span {
+      display: inline;
+      margin-left: 5px;
+    }
+  }
+}

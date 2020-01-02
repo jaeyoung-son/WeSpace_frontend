@@ -54,10 +54,12 @@ $width-small: 720px;
       background-position: 50% 50%;
       height: 100%;
       width: 100%;
+
       a {
         z-index: 10;
       }
       img {
+        z-index: 9;
         margin: 10px;
         width: 100px;
         height: 100px;
@@ -70,6 +72,7 @@ $width-small: 720px;
 
       .modal_profile_text {
         padding: 10px;
+        z-index: 10;
         .modal_profile_name {
           font-size: 24px;
           font-weight: 500;
