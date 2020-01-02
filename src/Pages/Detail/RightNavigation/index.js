@@ -23,6 +23,12 @@ class RightNavigation extends Component {
     reserveTime: []
   };
 
+  handleNumber = number => {
+    let num = number.replace(/\,/g, "");
+    num = parseInt(num);
+    return num;
+  };
+
   toRender = data => {
     if (data) {
       this.setState({
@@ -32,16 +38,15 @@ class RightNavigation extends Component {
   };
 
   onSubmit = () => {
-    console.log("dddddddddd");
     const { reserveTime } = this.state;
     const { year, month, senddate } = this.state.sendDate;
     const token = sessionStorage.getItem(LOGIN_TOKEN);
-    console.log("token", token);
+    // console.log("token", token);
     if (!token) {
       alert("로그인해주세요");
       return;
     }
-    console.log(sessionStorage.getItem(LOGIN_TOKEN));
+    // console.log(sessionStorage.getItem(LOGIN_TOKEN));
     fetch(`${API_YERIN_URL}/account/auth`, {
       method: "POST",
       body: JSON.stringify({
@@ -98,7 +103,7 @@ class RightNavigation extends Component {
   render() {
     const spaceData = this.state;
     const { radioChecked, date, reserveTime } = this.state;
-    const { dayChange, handleBtn, toRender, onSubmit } = this;
+    const { dayChange, handleBtn, toRender, onSubmit, handleNumber } = this;
     const {
       spaceType,
       spacePrice,
@@ -109,6 +114,7 @@ class RightNavigation extends Component {
       reserve
     } = spaceData.spaceData;
     const { year, month, senddate } = this.state.sendDate;
+    if (!spacePrice) return <></>;
     return (
       <>
         <div className="right_fixed">
@@ -207,7 +213,7 @@ class RightNavigation extends Component {
                 <span>공간사용료</span>
               </div>
               <div className={radioChecked ? "hide" : "price_print"}>
-                ₩{parseInt(spacePrice) * reserveTime.length}
+                ₩{handleNumber(spacePrice) * reserveTime.length}
               </div>
             </div>
             <div className="bot_btn">
