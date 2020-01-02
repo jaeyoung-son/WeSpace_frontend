@@ -1,0 +1,27 @@
+$width-small: 720px;
+$width-medium: 1000px;
+$width-large: 1300px;
+
+.review_zone_wrap {
+  width: 100%;
+  .zone_title_content {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    color: #484848;
+  }
+  .review_article_wrap {
+    margin: 0 auto;
+    width: 1300px;
+
+    @media all and(max-width:$width-large) {
+      width: 1000px;
+    }
+    @media all and(max-width:$width-medium) {
+      width: 600px;
+    }
+    @media all and(max-width:$width-small) {
+      width: 95%;
+    }
+  }
+}
