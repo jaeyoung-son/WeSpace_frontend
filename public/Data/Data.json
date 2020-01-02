@@ -2,43 +2,53 @@
   "data": [
     {
       "text1": "주류반입",
-      "text2": "가능"
+      "text2": "가능",
+      "class": "beer_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "음향/",
+      "text2": "마이크",
+      "class": "mike_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "의자/",
+      "text2": "테이블",
+      "class": "table_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "음식물",
+      "text2": "반입가능",
+      "class": "food_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "내부",
+      "text2": "화장실",
+      "class": "toilet_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "공용",
+      "text2": "라운지",
+      "class": "lounge_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "TV/",
+      "text2": "프로젝터",
+      "class": "tv_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "인터넷",
+      "text2": "와이파이",
+      "class": "wifi_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "반려동물",
+      "text2": "동반가능",
+      "class": "animal_img"
     }
   ],
   "spaceData": {
     "address": "부산 부산진구 동성로 27 세호기업 4층 오프데이 스튜디오",
+    "hostImg": "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157629518_670c107f6db129cc3e73674dd908e33e.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
     "imgLink": [
       "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630830_717e106d5ccd9d959b6a34fa779d8bae.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",
       "https://moplqfgeemqv2103108.cdn.ntruss.com/service/157630819_0ce90950671796d581d0aa0842406273.jpeg?type=m&w=900&h=900&autorotate=true&quality=90",

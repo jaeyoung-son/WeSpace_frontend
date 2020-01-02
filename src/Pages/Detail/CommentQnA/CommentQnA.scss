@@ -1,3 +1,7 @@
+$width-small: 720px;
+$width-medium: 1000px;
+$width-large: 1300px;
+
 .user_comment {
   padding: 24px 0 0;
   border-bottom: 1px solid #ebebeb;
@@ -15,17 +19,27 @@
       position: absolute;
       background-size: cover;
       background-position: 50%;
+      @media all and(max-width:$width-small) {
+        width: 65px;
+        height: 65px;
+      }
     }
 
     .user_name {
       font-size: 18px;
       line-height: 21px;
+      @media all and(max-width:$width-small) {
+        font-size: 14px;
+      }
     }
 
     .user_qus {
       margin-top: 11px;
       line-height: 28px;
       color: #656565;
+      @media all and(max-width:$width-small) {
+        font-size: 13px;
+      }
     }
 
     .comment_time {
@@ -52,11 +66,17 @@
     .host_head {
       font-size: 18px;
       color: #6d3afb;
+      @media all {
+        font-size: 14px;
+      }
     }
     .host_review {
       margin-top: 11px;
       line-height: 28px;
       color: #656565;
+      @media all {
+        font-size: 13px;
+      }
     }
 
     .host_time {

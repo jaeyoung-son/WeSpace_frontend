@@ -137,7 +137,11 @@ class QnAList extends Component {
             className="move_btn move_first"
           ></i>
           <i
-            onClick={() => handleMoveBtn(currentPage - 1)}
+            onClick={() => {
+              if (currentPage > 1) {
+                handleMoveBtn(currentPage - 1);
+              }
+            }}
             className="move_btn move_one_left"
           ></i>
           <div>
@@ -149,7 +153,11 @@ class QnAList extends Component {
             />
           </div>
           <i
-            onClick={() => handleMoveBtn(currentPage + 1)}
+            onClick={() => {
+              if (currentPage < Math.ceil(comment.length / postPerpage)) {
+                handleMoveBtn(currentPage + 1);
+              }
+            }}
             className="move_btn move_right"
           ></i>
           <i

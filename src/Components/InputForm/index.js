@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { API_YERIN_URL, LOGIN_TOKEN } from "../../config";
 import { checkMail, checkPw } from "../../Utils/CheckValidation";
+import { withRouter } from "react-router-dom";
 import "./InputForm.scss";
 
 class LoginForm extends Component {
@@ -18,7 +20,7 @@ class LoginForm extends Component {
     e.preventDefault();
     const { idInput, pwInput } = this.state;
     if (checkMail(idInput) && checkPw(pwInput)) {
-      fetch("http://10.58.7.97:8000/account/auth", {
+      fetch(`${API_YERIN_URL}/account/auth`, {
         method: "POST",
         body: JSON.stringify({
           email: idInput,
@@ -27,7 +29,7 @@ class LoginForm extends Component {
       })
         .then(res => res.json())
         .then(res => {
-          sessionStorage.setItem("login_token", res.access_token);
+          sessionStorage.setItem(LOGIN_TOKEN, res.access_token);
         });
       this.goToMain();
     }
@@ -115,4 +117,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

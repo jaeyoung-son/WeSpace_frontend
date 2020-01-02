@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { API_YERIN_URL, LOGIN_TOKEN } from "../../../config";
 import "./RightNavigation.scss";
 import fetchData from "../../../Utils/fetch";
 import DetailList from "../DetailList";
 import FacilityImg from "../FacilityImg";
 import Calendar from "react-calendar";
 import ScrollContainer from "react-indiana-drag-scroll";
+import { withRouter } from "react-router-dom";
 import TimeBox from "../TimeBox";
 
 class RightNavigation extends Component {
@@ -12,7 +14,64 @@ class RightNavigation extends Component {
     spaceData: {},
     radioChecked: true,
     date: new Date(),
-    checkPeople: ""
+    sendDate: {
+      year: "",
+      month: "",
+      senddate: ""
+    },
+    checkPeople: "",
+    reserveTime: []
+  };
+
+  handleNumber = number => {
+    let num = number.replace(/\,/g, "");
+    num = parseInt(num);
+    return num;
+  };
+
+  toRender = data => {
+    if (data) {
+      this.setState({
+        reserveTime: data
+      });
+    }
+  };
+
+  onSubmit = () => {
+    const { reserveTime } = this.state;
+    const { year, month, senddate } = this.state.sendDate;
+    const token = sessionStorage.getItem(LOGIN_TOKEN);
+    // console.log("token", token);
+    if (!token) {
+      alert("로그인해주세요");
+      return;
+    }
+    // console.log(sessionStorage.getItem(LOGIN_TOKEN));
+    fetch(`${API_YERIN_URL}/account/auth`, {
+      method: "POST",
+      body: JSON.stringify({
+        day: [year, month, senddate],
+        reserve: reserveTime.sort()
+      })
+    })
+      .then(res => {
+        alert(`${year} ${month} ${senddate} ${reserveTime}시 예약 되었습니다.`);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  dayChange = date => {
+    this.setState({ date }, () =>
+      this.setState({
+        sendDate: {
+          year: this.state.date.getFullYear() + "년",
+          month: this.state.date.getMonth() + 1 + "월",
+          senddate: this.state.date.getDate() + "일"
+        }
+      })
+    );
   };
 
   calcNum = e => {
@@ -43,8 +102,8 @@ class RightNavigation extends Component {
   }
   render() {
     const spaceData = this.state;
-    const { radioChecked, date } = this.state;
-    const { dayChange, handleBtn } = this;
+    const { radioChecked, date, reserveTime } = this.state;
+    const { dayChange, handleBtn, toRender, onSubmit, handleNumber } = this;
     const {
       spaceType,
       spacePrice,
@@ -54,6 +113,8 @@ class RightNavigation extends Component {
       people,
       reserve
     } = spaceData.spaceData;
+    const { year, month, senddate } = this.state.sendDate;
+    if (!spacePrice) return <></>;
     return (
       <>
         <div className="right_fixed">
@@ -108,6 +169,11 @@ class RightNavigation extends Component {
               </div>
               <div className={radioChecked ? "hide" : "day_header"}>
                 <span>날짜 선택 </span>
+                <span className="ymd">
+                  {year}
+                  {month}
+                  {senddate}
+                </span>
               </div>
               <Calendar
                 className={radioChecked ? "hide" : "calendar"}
@@ -115,7 +181,8 @@ class RightNavigation extends Component {
                 value={date}
               />
               <div className={radioChecked ? "hide" : "day_header"}>
-                <span>시간 선택</span>
+                <span>시간 선택 </span>
+                <span className="select_time">{reserveTime.length} 시간</span>
               </div>
               <ScrollContainer className="scroll">
                 <div className={radioChecked ? "hide" : "time_container"}>
@@ -125,7 +192,7 @@ class RightNavigation extends Component {
                         <div className="first_time_slice">0</div>
                         <div className="first_time_price"></div>
                       </div>
-                      <TimeBox price={spacePrice} />
+                      <TimeBox price={spacePrice} toRender={toRender} />
                     </li>
                   </ul>
                 </div>
@@ -142,6 +209,12 @@ class RightNavigation extends Component {
                   +
                 </div>
               </div>
+              <div className={radioChecked ? "hide" : "total_price"}>
+                <span>공간사용료</span>
+              </div>
+              <div className={radioChecked ? "hide" : "price_print"}>
+                ₩{handleNumber(spacePrice) * reserveTime.length}
+              </div>
             </div>
             <div className="bot_btn">
               <a className="call_btn" href="#pop3">
@@ -152,7 +225,7 @@ class RightNavigation extends Component {
               </a>
               <a className="reserve_btn" href="#pop4">
                 <div></div>
-                <span>예약신청하기</span>
+                <span onClick={onSubmit}>예약신청하기</span>
               </a>
             </div>
           </div>
@@ -185,4 +258,4 @@ class RightNavigation extends Component {
   }
 }
 
-export default RightNavigation;
+export default withRouter(RightNavigation);
