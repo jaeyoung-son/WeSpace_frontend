@@ -2,39 +2,48 @@
   "data": [
     {
       "text1": "주류반입",
-      "text2": "가능"
+      "text2": "가능",
+      "class": "beer_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "음향/",
+      "text2": "마이크",
+      "class": "mike_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "의자/",
+      "text2": "테이블",
+      "class": "table_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "음식물",
+      "text2": "반입가능",
+      "class": "food_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "내부",
+      "text2": "화장실",
+      "class": "toilet_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "공용",
+      "text2": "라운지",
+      "class": "lounge_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "TV/",
+      "text2": "프로젝터",
+      "class": "tv_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "인터넷",
+      "text2": "와이파이",
+      "class": "wifi_img"
     },
     {
-      "text1": "주류반입",
-      "text2": "가능"
+      "text1": "반려동물",
+      "text2": "동반가능",
+      "class": "animal_img"
     }
   ],
   "spaceData": {
@@ -50,7 +59,7 @@
     "holiday": "매주 월요일",
     "spaceType": "스튜디오",
     "subTitle": "전포동에 위치한 유니크한 감성의 스튜디오입니다.",
-    "spacePrice": "30,000",
+    "spacePrice": "30000",
     "spaceContext": "스튜디오 공간 전체를 사용하는 개념",
     "type": "세미나실 다목적홀 작업실 파티룸 공연장",
     "time": "최소 2시간 부터",

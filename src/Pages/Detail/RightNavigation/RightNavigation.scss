@@ -147,13 +147,40 @@ $width-large: 1300px;
       position: relative;
       width: 33%;
 
-      .facility_img {
+      div {
         position: absolute;
         background-size: 684px 663px;
         background-image: url(http://www.spacecloud.kr/_nuxt/img/08341ee.png);
         background-position: -599px -456px;
         width: 34px;
         height: 34px;
+      }
+      div.beer_img {
+        background-position: -599px -456px;
+      }
+      div.mike_img {
+        background-position: -114px -548px;
+      }
+      div.table_img {
+        background-position: -599px -380px;
+      }
+      div.food_img {
+        background-position: -76px -586px;
+      }
+      div.toilet_img {
+        background-position: -599px -114px;
+      }
+      div.lounge_img {
+        background-position: -532px -548px;
+      }
+      div.tv_img {
+        background-position: -599px 0;
+      }
+      div.wifi_img {
+        background-position: -342px -548px;
+      }
+      div.animal_img {
+        background-position: -478px -507px;
       }
 
       p {
@@ -208,11 +235,17 @@ $width-large: 1300px;
     }
 
     .day_header {
+      display: flex;
+      justify-content: space-between;
       padding-top: 32px;
       font-size: 18px;
       font-weight: 600;
       border-bottom: 3px solid #704de4;
       padding-bottom: 15px;
+      .select_time,
+      .ymd {
+        color: #704de4;
+      }
     }
     .react-calendar__navigation__label {
       font-size: 15px;
@@ -271,6 +304,20 @@ $width-large: 1300px;
           height: 41px;
           font-size: 10px;
           text-align: center;
+          cursor: pointer;
+        }
+        .clicked_box {
+          cursor: pointer;
+          padding-top: 14px;
+          color: white;
+          border: 2px solid #5940ac;
+          background-color: #704de4;
+          color: #fff;
+          width: 45px;
+          min-width: 45px;
+          height: 41px;
+          font-size: 10px;
+          text-align: center;
         }
       }
     }
@@ -305,6 +352,21 @@ $width-large: 1300px;
         cursor: pointer;
         border-left: 1px solid #ebebeb;
       }
+    }
+    .total_price {
+      margin: 32px 0 20px 0;
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .price_print {
+      padding-top: 20px;
+      border-top: 1px solid #cccccc;
+      text-align: right;
+      font-size: 24px;
+      color: #704de4;
+      font-weight: 600;
     }
   }
   .bot_btn {

@@ -28,7 +28,7 @@ $width-large: 1300px;
     .user_name {
       font-size: 18px;
       line-height: 21px;
-      @media all {
+      @media all and(max-width:$width-small) {
         font-size: 14px;
       }
     }
@@ -37,7 +37,7 @@ $width-large: 1300px;
       margin-top: 11px;
       line-height: 28px;
       color: #656565;
-      @media all {
+      @media all and(max-width:$width-small) {
         font-size: 13px;
       }
     }

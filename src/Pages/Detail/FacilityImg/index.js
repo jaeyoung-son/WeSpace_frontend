@@ -18,7 +18,7 @@ class FacilityImg extends Component {
     const { textData } = this.state;
     const facilityList = textData.map((el, index) => (
       <li key={index}>
-        <div className="facility_img"></div>
+        <div className={el.class}></div>
         <p>{el.text1}</p>
         <p>{el.text2}</p>
       </li>
