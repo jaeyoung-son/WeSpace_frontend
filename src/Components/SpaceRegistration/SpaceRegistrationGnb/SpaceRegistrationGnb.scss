@@ -1,0 +1,63 @@
+.space_nav {
+  font-family: NanumBarunGothic;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  height: 67px;
+  background-color: #704de4;
+  color: #fff;
+  line-height: 67px;
+  z-index: 10;
+
+  .space_nav_div {
+    padding: 0 45px;
+    font-size: 22px;
+
+    h2 {
+      height: 67px;
+      vertical-align: middle;
+    }
+  }
+  .space_nav_prev {
+    width: 78px;
+    height: 67px;
+  }
+  .space_nav_a_icon_prev {
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    width: 24px;
+    height: 26px;
+    left: 25px;
+    display: inline-block;
+    background-size: 657px 604px;
+    background-image: url("https://partner.spacecloud.kr/static/media/sp_spacecloud_pc.578dcc83.png");
+    background-position-x: -627px;
+    background-position-y: -284px;
+  }
+
+  .space_nav_menu {
+    width: 78px;
+    height: 67px;
+  }
+  .space_nav_a_icon_menu {
+    position: absolute;
+    top: 50%;
+    margin-top: -13px;
+    width: 24px;
+    height: 26px;
+    right: 25px;
+    display: inline-block;
+    background-size: 657px 604px;
+    background-image: url("https://partner.spacecloud.kr/static/media/sp_spacecloud_pc.578dcc83.png");
+    background-position: -627px -504px;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+}
