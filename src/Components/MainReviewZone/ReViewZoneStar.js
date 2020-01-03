@@ -2,19 +2,26 @@ import React, { Component } from "react";
 import "./ReViewZoneStar.scss";
 
 class ReViewZoneStar extends Component {
+  state = {
+    star: this.props.star,
+    data: this.props.data
+  };
+  createStar() {
+    const result = [];
+    for (let i = 1; i <= this.state.star; i++) {
+      result.push(<span className="full_star"></span>);
+    }
+    for (let j = this.state.star; j < 5; j++) {
+      result.push(<span className="empty_star"></span>);
+    }
+    return result;
+  }
   render() {
     return (
       <div className="space_review_area">
-        <div className="review_rate">
-          <span className="full_star"></span>
-          <span className="full_star"></span>
-          <span className="full_star"></span>
-          <span className="full_star"></span>
-          <span className="empty_star"></span>
-        </div>
+        <div className="review_rate">{this.createStar()}</div>
         <div className="space_text">
-          오늘 여기와서 너무 좋았어요 짱짱맨 다음에도 여기와서 파티하고 싶네요
-          연말에 즐겁게 보내고 갑니다.
+          {this.state.data.long_intro.slice(0, 100)}
         </div>
       </div>
     );

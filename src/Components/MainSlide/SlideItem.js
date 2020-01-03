@@ -8,14 +8,14 @@ class SlideItem extends Component {
       <Link to="/" className="slide_wrap">
         <div className="each-slide">
           <div
-            style={{ backgroundImage: `url(${this.props.slideImage})` }}
+            style={{ backgroundImage: `url(${this.props.data.img})` }}
             className="slideItem_image"
           >
             <div className="slideItem_article">
-              <h3 className="slideItem_title">제목</h3>
+              <h3 className="slideItem_title">{this.props.data.title}</h3>
               <p className="slideItem_text">
-                워크샵 장소를 <br />
-                추천해 드립니다
+                {this.props.data.text} <br />
+                {this.props.data.text2}
               </p>
               <br />
               <div className="slideItem_btn">바로가기</div>
