@@ -7,6 +7,7 @@ import FacilityImg from "../FacilityImg";
 import Calendar from "react-calendar";
 import ScrollContainer from "react-indiana-drag-scroll";
 import { withRouter } from "react-router-dom";
+import { handleNumber } from "../../../Utils/handleNumber";
 import TimeBox from "../TimeBox";
 
 class RightNavigation extends Component {
@@ -20,13 +21,8 @@ class RightNavigation extends Component {
       senddate: ""
     },
     checkPeople: "",
-    reserveTime: []
-  };
-
-  handleNumber = number => {
-    let num = number.replace(/\,/g, "");
-    num = parseInt(num);
-    return num;
+    reserveTime: [],
+    realSpaceData: {}
   };
 
   toRender = data => {
@@ -37,22 +33,41 @@ class RightNavigation extends Component {
     }
   };
 
+  goToLogin = () => {
+    this.props.history.push("/login");
+  };
+
+  goToMain = () => {
+    this.props.history.push("/");
+  };
+
   onSubmit = () => {
     const { reserveTime } = this.state;
     const { year, month, senddate } = this.state.sendDate;
-    const token = sessionStorage.getItem(LOGIN_TOKEN);
+    const token = localStorage.getItem(LOGIN_TOKEN);
     // console.log("token", token);
     if (!token) {
       alert("로그인해주세요");
+      this.goToLogin();
       return;
     }
     // console.log(sessionStorage.getItem(LOGIN_TOKEN));
-    fetch(`${API_YERIN_URL}/account/auth`, {
+    fetch(`${API_YERIN_URL}/space/reservation`, {
       method: "POST",
-      body: JSON.stringify({
-        day: [year, month, senddate],
-        reserve: reserveTime.sort()
-      })
+      headers: {
+        Authorization: token
+      },
+      body: JSON.stringify(
+        {
+          host_id: this.state.realSpaceData.result[0].host[0].id,
+          space_id: this.state.realSpaceData.result[0].id,
+          year: year,
+          month: month,
+          day: senddate,
+          hour: reserveTime.sort()
+        },
+        console.log(year, month, senddate)
+      )
     })
       .then(res => {
         alert(`${year} ${month} ${senddate} ${reserveTime}시 예약 되었습니다.`);
@@ -60,18 +75,18 @@ class RightNavigation extends Component {
       .catch(err => {
         console.log(err);
       });
+    this.goToMain();
   };
 
   dayChange = date => {
-    this.setState({ date }, () =>
-      this.setState({
-        sendDate: {
-          year: this.state.date.getFullYear() + "년",
-          month: this.state.date.getMonth() + 1 + "월",
-          senddate: this.state.date.getDate() + "일"
-        }
-      })
-    );
+    this.setState({
+      date,
+      sendDate: {
+        year: this.state.date.getFullYear(),
+        month: this.state.date.getMonth() + 1,
+        senddate: this.state.date.getDate()
+      }
+    });
   };
 
   calcNum = e => {
@@ -99,11 +114,19 @@ class RightNavigation extends Component {
         checkPeople: data.spaceData.minPeople
       });
     });
+    const link = this.props.match.params.name;
+    fetchData(`http://10.58.7.97:8000/space/${link}`).then(res => {
+      this.setState({
+        realSpaceData: res
+      });
+    });
   }
   render() {
+    if (!this.state.realSpaceData.result) return <></>;
     const spaceData = this.state;
-    const { radioChecked, date, reserveTime } = this.state;
-    const { dayChange, handleBtn, toRender, onSubmit, handleNumber } = this;
+    const { radioChecked, date, reserveTime, realSpaceData } = this.state;
+    const { price, title, space_images } = realSpaceData.result[0];
+    const { dayChange, handleBtn, toRender, onSubmit } = this;
     const {
       spaceType,
       spacePrice,
@@ -137,13 +160,14 @@ class RightNavigation extends Component {
                 <span className="check_space">{spaceType}</span>
               </div>
               <div>
-                <span className="reserve_left">₩{spacePrice}</span>
+                <span className="reserve_left">₩{parseInt(price)}</span>
                 <span className="reserve_right">/시간</span>
               </div>
             </div>
             <div className="space_info">
               <div className="info_top">
-                <div className="info_img"></div>
+                {/* <div className="info_img"></div> */}
+                <img className="info_img" src={space_images[0]} alt="." />
                 <p>{spaceContext}</p>
               </div>
               <ul className="list_detail">
@@ -170,9 +194,7 @@ class RightNavigation extends Component {
               <div className={radioChecked ? "hide" : "day_header"}>
                 <span>날짜 선택 </span>
                 <span className="ymd">
-                  {year}
-                  {month}
-                  {senddate}
+                  {year}년{month}월{senddate}일
                 </span>
               </div>
               <Calendar
@@ -192,7 +214,7 @@ class RightNavigation extends Component {
                         <div className="first_time_slice">0</div>
                         <div className="first_time_price"></div>
                       </div>
-                      <TimeBox price={spacePrice} toRender={toRender} />
+                      <TimeBox price={parseInt(price)} toRender={toRender} />
                     </li>
                   </ul>
                 </div>
@@ -213,7 +235,7 @@ class RightNavigation extends Component {
                 <span>공간사용료</span>
               </div>
               <div className={radioChecked ? "hide" : "price_print"}>
-                ₩{handleNumber(spacePrice) * reserveTime.length}
+                ₩{handleNumber(price) * reserveTime.length}
               </div>
             </div>
             <div className="bot_btn">
@@ -242,9 +264,9 @@ class RightNavigation extends Component {
             친절하게 안내 받으실 수 있습니다. :)
           </p>
           <div className="call_info">
-            {spaceData.spaceData.name}
+            {title}
             <br></br>
-            <span>{spaceData.spaceData.call}</span>
+            <span>{realSpaceData.result[0].host[0].phonenumber}</span>
           </div>
           <div className="call_btn">
             <a href="#c">확인</a>

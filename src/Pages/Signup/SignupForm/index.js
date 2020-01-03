@@ -52,7 +52,43 @@ class SignupForm extends Component {
       })
         .then(res => res.json())
         .then(res => {
-          sessionStorage.setItem("Signup_token", res.access_token);
+          localStorage.setItem("Signup_token", res.access_token);
+        });
+      this.goToMain();
+    } else {
+      e.preventDefault();
+    }
+  };
+
+  handleHostSubmit = e => {
+    const {
+      nameInput,
+      pwInput,
+      idInput,
+      rePwInput,
+      boxMemoryOne,
+      boxMemoryTwo
+    } = this.state;
+    if (
+      nameInput.length > 1 &&
+      checkPw(pwInput) === true &&
+      checkMail(idInput) === true &&
+      rePwInput === pwInput &&
+      boxMemoryOne === false &&
+      boxMemoryTwo === false
+    ) {
+      e.preventDefault();
+      fetch("http://10.58.7.97:8000/account/host", {
+        method: "POST",
+        body: JSON.stringify({
+          nick_name: nameInput,
+          email: idInput,
+          password: pwInput
+        })
+      })
+        .then(res => res.json())
+        .then(res => {
+          localStorage.setItem("Signup_token", res.access_token);
         });
       this.goToMain();
     } else {
@@ -122,6 +158,7 @@ class SignupForm extends Component {
       boxMemoryFour
     } = this.state;
     const {
+      handleHostSubmit,
       handleChange,
       handleBoxState,
       handleSubmit,
@@ -227,6 +264,9 @@ class SignupForm extends Component {
           <div>
             <button onClick={handleSubmit} className="submit" type="submit">
               회원가입
+            </button>
+            <button onClick={handleHostSubmit} className="submit" type="submit">
+              호스트로 회원가입
             </button>
           </div>
         </form>

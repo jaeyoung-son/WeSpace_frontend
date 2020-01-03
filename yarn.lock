@@ -8832,6 +8832,11 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
+react-kakao-login@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-kakao-login/-/react-kakao-login-1.2.0.tgz#3c54f432ac9ea4214f817e00f678bae63a463f22"
+  integrity sha512-InisI33rdggQMWehc4UYxkCnb9l9EWQ0sHOa8tJAZ8ep19FOlrfhw/iZMRnoNPl5qHHnH8oRDi+9TQxBYYccQA==
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
