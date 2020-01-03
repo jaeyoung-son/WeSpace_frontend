@@ -1,0 +1,95 @@
+$width-large: 1300px;
+.responsive_footer_wrap {
+  display: none;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #656565;
+  @media all and (max-width: $width-large) {
+    display: block;
+  }
+  @media all and (min-width: $width-large) {
+    display: none;
+  }
+  .footer_logo {
+    background-image: url("https://www.spacecloud.kr/_nuxt/img/a1927c9.png");
+    background-size: 463px 458px;
+    background-position: 0 -273px;
+    width: 108px;
+    height: 22px;
+    margin: 0 auto;
+  }
+  .info_wrap {
+    font-size: 16px;
+  }
+  .footer_company_info {
+    position: relative;
+    display: inline-block;
+    .footer_arrow {
+      display: inline-block;
+      background-image: url("https://www.spacecloud.kr/_nuxt/img/a1927c9.png");
+      background-size: 463px 458px;
+      width: 9px;
+      height: 5px;
+      position: absolute;
+      top: 40%;
+      right: -5%;
+    }
+    .arrow_up {
+      background-position: -223px -192px;
+    }
+    .arrow_down {
+      background-position: -234px -192px;
+    }
+  }
+  .info_text {
+    display: block;
+    li {
+      margin: 5px 0;
+    }
+    .online {
+      text-decoration: underline;
+    }
+  }
+  .hide {
+    display: none;
+  }
+  .sns_wrap {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #cecece;
+  }
+  a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-left: 3px;
+  }
+  .icon_blog {
+    background-position: -389px -380px;
+  }
+  .icon_post {
+    background-position: -400px -507px;
+  }
+  .icon_facebook {
+    background-position: -361px -507px;
+  }
+  .icon_tweeter {
+    background-position: -428px -380px;
+  }
+  .icon_instagram {
+    background-position: -439px -507px;
+  }
+  .bar_list {
+    padding: 5px;
+    li {
+      display: inline-block;
+      margin: 5px;
+      padding-left: 3px;
+      border-left: 1px solid #cecece;
+    }
+    .first {
+      border: 0;
+    }
+  }
+}
