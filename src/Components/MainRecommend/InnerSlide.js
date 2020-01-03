@@ -6,52 +6,35 @@ import InnerSlideArticle from "./InnerSlideArticle.js";
 import Payment from "./Payment";
 
 class InnerSlide extends Component {
+  state = {
+    data: this.props.data
+  };
   render() {
     return (
       <>
-        <div className="main_inner_slide">
-          <Carousel width={"100%"} showThumbs={false} showStatus={false} showIndicators={false} infiniteLoop={true}>
-            {this.props.data.map((curr, i) => {
-              return (
-                <div className="inner_slide_image" key={i}>
-                  <img src={curr} alt="추천 이미지" />
-                </div>
-              );
-            })}
-          </Carousel>
-          <Payment />
-          <InnerSlideArticle />
-        </div>
-        <div className="main_inner_slide">
-          <Carousel width={"100%"} showThumbs={false} showStatus={false} showIndicators={false} infiniteLoop={true}>
-            <div className="inner_slide_image">
-              <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="추천 이미지" />
+        {this.state.data.map((currSpace, i) => {
+          return (
+            <div className="main_inner_slide" key={i}>
+              <Carousel
+                width={"100%"}
+                showThumbs={false}
+                showStatus={false}
+                showIndicators={false}
+                infiniteLoop={true}
+              >
+                {this.state.data[i].image.map((currImg, j) => {
+                  return (
+                    <div className="inner_slide_image" key={j}>
+                      <img src={currImg.space_image} alt="추천 이미지" />
+                    </div>
+                  );
+                })}
+              </Carousel>
+              <Payment />
+              <InnerSlideArticle data={currSpace} />
             </div>
-            <div className="inner_slide_image">
-              <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="추천 이미지" />
-            </div>
-            <div className="inner_slide_image">
-              <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="추천 이미지" />
-            </div>
-          </Carousel>
-          <Payment />
-          <InnerSlideArticle />
-        </div>
-        <div className="main_inner_slide">
-          <Carousel width={"100%"} showThumbs={false} showStatus={false} showIndicators={false} infiniteLoop={true}>
-            <div className="inner_slide_image">
-              <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="추천 이미지" />
-            </div>
-            <div className="inner_slide_image">
-              <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="추천 이미지" />
-            </div>
-            <div className="inner_slide_image">
-              <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" alt="추천 이미지" />
-            </div>
-          </Carousel>
-          <Payment />
-          <InnerSlideArticle />
-        </div>
+          );
+        })}
       </>
     );
   }

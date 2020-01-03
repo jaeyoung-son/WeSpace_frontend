@@ -12,9 +12,9 @@ class MainList extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://10.58.7.97:8000")
+      .get("http://10.58.7.97:8000/space")
       .then(res => {
-        this.setState({ list: res.data.category });
+        this.setState({ list: res.data.Categority });
       })
       .catch(err => {
         console.log(err);
