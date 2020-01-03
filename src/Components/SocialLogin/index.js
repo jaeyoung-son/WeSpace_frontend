@@ -8,7 +8,7 @@ const SocialLogin = ({ name }) => {
         <a href="/login" className="naver">
           네이버로 {name}
         </a>
-        <a href="/login" className="kakao">
+        <a id="kakao-login-btn" href="/login" className="kakao">
           카카오로 {name}
         </a>
       </div>

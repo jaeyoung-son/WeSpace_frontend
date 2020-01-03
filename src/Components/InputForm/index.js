@@ -29,7 +29,26 @@ class LoginForm extends Component {
       })
         .then(res => res.json())
         .then(res => {
-          sessionStorage.setItem(LOGIN_TOKEN, res.access_token);
+          localStorage.setItem(LOGIN_TOKEN, res.access_token);
+        });
+      this.goToMain();
+    }
+  };
+
+  handleHostSubmit = e => {
+    e.preventDefault();
+    const { idInput, pwInput } = this.state;
+    if (checkMail(idInput) && checkPw(pwInput)) {
+      fetch(`${API_YERIN_URL}/account/hostauth`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: idInput,
+          password: pwInput
+        })
+      })
+        .then(res => res.json())
+        .then(res => {
+          localStorage.setItem(LOGIN_TOKEN, res.access_token);
         });
       this.goToMain();
     }
@@ -61,7 +80,8 @@ class LoginForm extends Component {
       handleIdChange,
       handlePwChange,
       handleBoxState,
-      handleSubmit
+      handleSubmit,
+      handleHostSubmit
     } = this;
     return (
       <form>
@@ -111,6 +131,9 @@ class LoginForm extends Component {
         </div>
         <button onClick={handleSubmit} className="submit" type="submit">
           이메일로 로그인
+        </button>
+        <button onClick={handleHostSubmit} className="submit" type="submit">
+          호스트로 로그인
         </button>
       </form>
     );

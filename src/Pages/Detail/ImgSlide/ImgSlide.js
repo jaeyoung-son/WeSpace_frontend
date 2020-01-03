@@ -17,16 +17,24 @@ class ImgSlide extends Component {
   };
 
   componentDidMount() {
-    fetchData("http://localhost:3000/data/data.json").then(res => {
+    //   fetchData("http://localhost:3000/data/data.json").then(res => {
+    //     this.setState({
+    //       link: res.spaceData.imgLink
+    //     });
+    //   });
+    const link = this.props.match.params.name;
+    fetchData(`http://10.58.7.97:8000/space/${link}`).then(res => {
       this.setState({
-        link: res.spaceData.imgLink
+        link: res
       });
     });
   }
 
   render() {
     const { link } = this.state;
-    const slideLink = link.map((el, index) => (
+    if (link.result === undefined) return <></>;
+    console.log({ link });
+    const slideLink = link.result[0].space_images.map((el, index) => (
       <div className="parent_div" key={index}>
         <div className="left_slide"></div>
         <img src={el} alt="img1" />
