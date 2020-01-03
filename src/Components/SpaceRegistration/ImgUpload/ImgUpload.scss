@@ -1,0 +1,43 @@
+.img_upload {
+  display: flex;
+  .img_preview {
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    img {
+      width: 50%;
+      height: 100%;
+      border-color: white;
+    }
+  }
+  .img_add {
+    width: 30%;
+    text-align: center;
+    label {
+      margin-right: 15px;
+      display: inline-block;
+      padding: 0.5em 0.75em;
+      color: white;
+      width: 80%;
+      font-size: inherit;
+      line-height: normal;
+      vertical-align: middle;
+      background-color: #704de4;
+      cursor: pointer;
+      border-radius: 0.25em;
+      text-align: center;
+    }
+    input[type="file"] {
+      /* 파일 필드 숨기기 */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
+}

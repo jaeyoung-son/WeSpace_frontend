@@ -36,7 +36,7 @@ class MainGnb extends Component {
           <Link to="/" className="nav_link">
             기획전
           </Link>
-          <Link to="/" className="nav_link">
+          <Link to="/Registration" className="nav_link">
             공간 등록하기
           </Link>
           <div className="menu_link" onClick={this.openedClosedModal}>

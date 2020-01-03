@@ -1,0 +1,16 @@
+.subtitle {
+  margin-top: 100px;
+  position: relative;
+  font-size: 26px;
+  line-height: 26px;
+  border-bottom: 3px solid #704de4;
+  border-bottom-width: 4px;
+  padding-bottom: 26px;
+  .subtitle_input {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 28px;
+    border-radius: 3px;
+    border: 1px solid #704de4;
+  }
+}

@@ -1,0 +1,12 @@
+.option {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  font-size: 14px;
+  color: #704de4;
+  line-height: 14px;
+  .option_necessary {
+    color: #ff3a48;
+    font-size: 16px;
+  }
+}

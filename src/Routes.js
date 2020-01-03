@@ -5,6 +5,7 @@ import Login from "./Pages/Login/Login";
 import Mypage from "./Pages/Mypage/Mypage";
 import Signup from "./Pages/Signup";
 import Detail from "./Pages/Detail/Detail";
+import SpaceRegistration from "./Pages/SpaceRegistration";
 
 class Routes extends React.Component {
   render() {
@@ -16,7 +17,11 @@ class Routes extends React.Component {
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/Detail/:name" component={Detail} />
           <Route exact path="/Detail" component={Detail} />
+<<<<<<< HEAD
+          <Route exact path="/Registration" component={SpaceRegistration} />
+=======
           <Route exact path="/Mypage" component={Mypage} />
+>>>>>>> origin
         </Switch>
       </Router>
     );

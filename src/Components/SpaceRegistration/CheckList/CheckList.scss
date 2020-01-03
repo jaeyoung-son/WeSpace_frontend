@@ -1,0 +1,31 @@
+.check_list_wrap {
+  margin: 100px auto;
+  width: 1300px;
+  .check_list {
+    .list_item {
+      background-color: white;
+      font-size: 18px;
+      position: relative;
+      width: 33%;
+      height: 60px;
+      display: inline-block;
+      border: 1px solid #b6b6b6;
+      div {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-left: 15px;
+      }
+      .list_icon {
+        content: "";
+        position: absolute;
+        background-size: 657px 604px;
+        background-image: url("https://partner.spacecloud.kr/static/media/sp_spacecloud_pc.578dcc83.png");
+        background-position: -519px -486px;
+        width: 20px;
+        height: 18px;
+        top: 25px;
+        right: 20px;
+      }
+    }
+  }
+}
