@@ -1,5 +1,5 @@
 import React from "react";
-import MainGnb from "../../Components/MainGnb";
+import MainGnb from "../../Components/Gnb";
 import "./Mypage.scss";
 
 const Mypage = () => {

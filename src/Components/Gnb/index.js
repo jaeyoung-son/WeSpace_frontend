@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./MainGnb.scss";
-import Modal from "./MainModal/Modal";
+import Modal from "../MainModal/Modal";
 import { Link } from "react-router-dom";
-import logoImage from "../Images/WeLogo.png";
+import logoImage from "../../Images/WeLogo.png";
 
 class MainGnb extends Component {
   constructor(props) {

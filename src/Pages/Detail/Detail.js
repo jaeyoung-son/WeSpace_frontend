@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MainGnB from "../../Components/MainGnb";
+import MainGnB from "../../Components/Gnb";
 import RightNavigation from "./RightNavigation";
 import fetchData from "../../Utils/fetch";
 import HeadingTag from "./HeadingTag";

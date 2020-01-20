@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MainList.scss";
 import axios from "axios";
+import { API_YERIN_URL } from "../../config";
 
 class MainList extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class MainList extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://10.58.7.97:8000/space")
+      .get(`${API_YERIN_URL}/space`)
       .then(res => {
         this.setState({ list: res.data.Categority });
       })

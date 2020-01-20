@@ -1,6 +1,6 @@
 import React from "react";
 import MainSlideImages from "../../Components/MainSlide";
-import MainGnb from "../../Components/MainGnb";
+import MainGnb from "../../Components/Gnb";
 import MainList from "../../Components/MainList";
 import "../../Styles/Main.scss";
 import MainRecommend from "../../Components/MainRecommend";

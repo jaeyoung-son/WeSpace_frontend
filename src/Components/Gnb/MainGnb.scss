@@ -13,6 +13,7 @@ $width-large: 1300px;
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @media all and(max-width:$width-small) {
     height: 48px;
   }
@@ -21,8 +22,7 @@ $width-large: 1300px;
   .logo {
     display: block;
     width: 250px;
-    padding: 20px 0 23px 30px;
-
+    padding: 10px;
     @media all and(max-width:$width-small) {
       padding: 20px 5px 15px;
       img {
@@ -34,7 +34,6 @@ $width-large: 1300px;
   //검색창
   .header_input {
     width: 1158px;
-    margin: 10px;
     .header_input_wrap {
       position: relative;
       width: 764px;
@@ -67,10 +66,10 @@ $width-large: 1300px;
         right: 0;
         width: 30px;
         height: 30px;
-        background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+        background-image: url('https://www.spacecloud.kr/_nuxt/img/08341ee.png');
         background-position: -637px -156px;
         @media all and(max-width:$width-small) {
-          background-image: url("https://www.spacecloud.kr/_nuxt/img/a1927c9.png");
+          background-image: url('https://www.spacecloud.kr/_nuxt/img/a1927c9.png');
           position: absolute;
           top: 50%;
           right: 10px;
@@ -111,11 +110,11 @@ $width-large: 1300px;
         display: inline-block;
         width: 28px;
         height: 22px;
-        margin-right: 5px;
-        background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+        margin-left: 99%;
+        background-image: url('https://www.spacecloud.kr/_nuxt/img/08341ee.png');
         background-position: -637px -540px;
         @media all and(max-width:$width-small) {
-          background-image: url("https://www.spacecloud.kr/_nuxt/img/a1927c9.png");
+          background-image: url('https://www.spacecloud.kr/_nuxt/img/a1927c9.png');
           position: absolute;
           top: 50%;
           margin-top: -9px;

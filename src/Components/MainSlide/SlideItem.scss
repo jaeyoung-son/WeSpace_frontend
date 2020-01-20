@@ -9,7 +9,8 @@ $width-small: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: 50%, 50%;
   width: 100%;
   height: 470px;
   position: relative;
@@ -36,8 +37,8 @@ $width-small: 720px;
     .slideItem_text {
       //왼쪽 버튼
       &::before {
-        content: " ";
-        background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+        content: ' ';
+        background-image: url('https://www.spacecloud.kr/_nuxt/img/08341ee.png');
         width: 14px;
         height: 13px;
         background-position: -423px -646px;
@@ -53,8 +54,8 @@ $width-small: 720px;
       }
       //오른쪽버튼
       &::after {
-        content: " ";
-        background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png");
+        content: ' ';
+        background-image: url('https://www.spacecloud.kr/_nuxt/img/08341ee.png');
         width: 14px;
         height: 13px;
         background-position: -441px -645px;
@@ -98,14 +99,14 @@ $width-small: 720px;
 }
 .react-slideshow-container .nav {
   background: transparent !important;
-  background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png") !important;
+  background-image: url('https://www.spacecloud.kr/_nuxt/img/08341ee.png') !important;
   background-position: -637px -299px !important;
   border-radius: 0 !important;
   z-index: 1;
 }
 
 .react-slideshow-container .nav:first-of-type {
-  background-image: url("https://www.spacecloud.kr/_nuxt/img/08341ee.png") !important;
+  background-image: url('https://www.spacecloud.kr/_nuxt/img/08341ee.png') !important;
   background-position: -637px -259px !important;
   position: absolute;
   top: 44%;
