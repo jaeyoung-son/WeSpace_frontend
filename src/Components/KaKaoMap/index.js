@@ -16,7 +16,8 @@ class KaKaoMap extends Component {
   componentDidMount() {
     const script = document.createElement("script");
     script.async = true;
-    script.src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=4739d49844352d17f62f36925fe6908b&autoload=false&libraries=services";
+    script.src =
+      "//dapi.kakao.com/v2/maps/sdk.js?appkey=4739d49844352d17f62f36925fe6908b&autoload=false&libraries=services";
     document.head.appendChild(script);
 
     script.onload = () => {
@@ -40,7 +41,11 @@ class KaKaoMap extends Component {
             const imageSrc = "https://www.spacecloud.kr/_nuxt/img/cace91f.png", // 마커이미지의 주소
               imageSize = new kakao.maps.Size(36, 47), // 마커이미지의 크기
               imageOption = { offset: new kakao.maps.Point(27, 69) };
-            const markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+            const markerImage = new kakao.maps.MarkerImage(
+              imageSrc,
+              imageSize,
+              imageOption
+            );
             console.log(coords);
             //마커를 생성
             const marker = new kakao.maps.Marker({
@@ -101,9 +106,19 @@ class KaKaoMap extends Component {
       <div className="map_wrap" style={mapWidth}>
         <div className="map" id="map" ref={ref => (this.mapRef = ref)}></div>
         <div className="custom_zoomcontrol radius_border">
-          <span className={this.state.clicked ? "custom_zoomcontrol_lock" : "custom_zoomcontrol_unlock"} onClick={this.handleClick}></span>
+          <span
+            className={
+              this.state.clicked
+                ? "custom_zoomcontrol_lock"
+                : "custom_zoomcontrol_unlock"
+            }
+            onClick={this.handleClick}
+          ></span>
           <span className="custom_zoomcontrol_in" onClick={this.zoomIn}></span>
-          <span className="custom_zoomcontrol_out" onClick={this.zoomOut}></span>
+          <span
+            className="custom_zoomcontrol_out"
+            onClick={this.zoomOut}
+          ></span>
         </div>
       </div>
     );

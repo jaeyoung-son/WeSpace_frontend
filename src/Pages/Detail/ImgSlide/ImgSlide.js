@@ -22,7 +22,7 @@ class ImgSlide extends Component {
     //       link: res.spaceData.imgLink
     //     });
     //   });
-    const link = this.props.match.params.name;
+    const link = this.props.match;
     fetchData(`http://10.58.7.97:8000/space/${link}`).then(res => {
       this.setState({
         link: res
