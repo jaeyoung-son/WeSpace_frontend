@@ -6,7 +6,7 @@
 ## 사용된 기술
 
 - Front-End: **ReactJS**, **Sass**
-- Back-End: **Django**, **MySQL** ([Back-End Repository 주소](https://github.com/wecode-bootcamp-korea/WeSpace_backend))
+- Back-End: **Django**, **MySQL** 
 
 ## 기능
 
