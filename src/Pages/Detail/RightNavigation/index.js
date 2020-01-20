@@ -79,14 +79,20 @@ class RightNavigation extends Component {
   };
 
   dayChange = date => {
-    this.setState({
-      date,
-      sendDate: {
-        year: this.state.date.getFullYear(),
-        month: this.state.date.getMonth() + 1,
-        senddate: this.state.date.getDate()
+    this.setState(
+      {
+        date
+      },
+      () => {
+        this.setState({
+          sendDate: {
+            year: this.state.date.getFullYear(),
+            month: this.state.date.getMonth() + 1,
+            senddate: this.state.date.getDate()
+          }
+        });
       }
-    });
+    );
   };
 
   calcNum = e => {
@@ -114,8 +120,7 @@ class RightNavigation extends Component {
         checkPeople: data.spaceData.minPeople
       });
     });
-    const link = this.props.match.params.name;
-    fetchData(`http://10.58.7.97:8000/space/${link}`).then(res => {
+    fetchData(`http://10.58.7.97:8000/space/${this.props.link}`).then(res => {
       this.setState({
         realSpaceData: res
       });

@@ -34,7 +34,7 @@ class QnAList extends Component {
     const userComment = [
       {
         userImg: "https://ssl.pstatic.net/static/pwe/address/img_profile.png", // 로그인한 유저정보
-        userName: "재영이",
+        userName: "아니저개",
         userQus: this.state.inputComment,
         userTime: "2019.12.27 09:46:02"
       }
