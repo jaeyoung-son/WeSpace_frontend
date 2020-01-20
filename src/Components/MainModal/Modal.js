@@ -10,7 +10,7 @@ const Menu = ["스페이스 클라우드 홈", "써 본 사람", "공지사항",
 
 class Modal extends Component {
   handleCheck = () => {
-    const value = sessionStorage.getItem("login_token");
+    const value = localStorage.getItem("login_token");
     if (value !== null) {
       return (
         <div className="profile_background">
@@ -38,7 +38,7 @@ class Modal extends Component {
     }
   };
   handleLogout = () => {
-    sessionStorage.removeItem("login_token");
+    localStorage.removeItem("login_token");
   };
   render() {
     return (
