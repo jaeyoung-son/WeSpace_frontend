@@ -17,11 +17,8 @@ class Routes extends React.Component {
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/Detail/:name" component={Detail} />
           <Route exact path="/Detail" component={Detail} />
-<<<<<<< HEAD
           <Route exact path="/Registration" component={SpaceRegistration} />
-=======
           <Route exact path="/Mypage" component={Mypage} />
->>>>>>> origin
         </Switch>
       </Router>
     );
