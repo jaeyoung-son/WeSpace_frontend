@@ -7,6 +7,7 @@ class InnerSlideArticle extends Component {
     data: this.props.data
   };
   render() {
+    console.log(this.state.data.tag);
     return (
       <div className="inner_slide_article">
         <h3 className="inner_article_title">{this.state.data.title}</h3>
@@ -19,9 +20,9 @@ class InnerSlideArticle extends Component {
             )}
           </div>
           <div className="tag_hash">
-            {/* {this.state.data.tag.map((currTag, i) => {
-              return `#${currTag.tag}`;
-            })} */}
+            {this.state.data.tag.map((currTag, i) => {
+              return `#${currTag}`;
+            })}
           </div>
         </div>
         <div className="inner_slide_price">
