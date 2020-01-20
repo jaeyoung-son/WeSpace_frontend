@@ -89,8 +89,8 @@ class Detail extends Component {
             </div>
 
             <div className="detail_form">
-              <RightNavigation />
-              <ImgSlide />
+              <RightNavigation link={this.props.match.params.name} />
+              <ImgSlide link={this.props.match.params.name} />
               <div className="detail_inf">
                 <p className="detail_main">{short_intro}</p>
                 <p className="h_intro h_top">공간 소개</p>
